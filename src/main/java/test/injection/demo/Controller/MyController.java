@@ -35,7 +35,7 @@ public class MyController{
 
     @GetMapping("/animals/{id}")
     public List<Animals> getAnimals(@PathVariable String id){
-        return repo.findByname(id);
+        return repo.findByname(id); 
     }
 
 }

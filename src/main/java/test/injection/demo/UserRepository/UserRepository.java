@@ -9,7 +9,7 @@ import test.injection.demo.Entity.Animals;
 
 public interface UserRepository extends CrudRepository<Animals,Integer>{
     
-    @Query(nativeQuery=true,value="SELECT * FROM animals WHERE name=:name")
+    @Query(nativeQuery=true,value="SELECT * FROM animals WHERE name= ?1" )
     List<Animals> findByname(String name);
 
 }
